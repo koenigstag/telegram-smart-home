@@ -1,0 +1,21 @@
+{
+  "name": "telegram-smart-home",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "clipboardy": "^2.3.0",
+    "shelljs": "^0.8.4",
+    "slimbot": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
