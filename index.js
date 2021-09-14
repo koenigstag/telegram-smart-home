@@ -28,7 +28,7 @@ slimbot.on('message', async message => {
     const result = shell.exec(command)
     const stderr = result.stderr
     const stdout = result.stdout
-    slimbot.sendMessage(message.chat.id, 'Stdout:\n' + stdout + "\n\n" +"Stderr:\n" + stderr)
+    slimbot.sendMessage(message.chat.id, '**Stdout:**\n' + stdout + "\n\n" +"**Stderr:**\n" + stderr)
   }
   else {
   switch (message.text) {
