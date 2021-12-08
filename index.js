@@ -46,6 +46,12 @@ slimbot.on('message', async message => {
       responseText = ip
       break
     }
+    case 'ngrok-url': {
+      const result = shell.exec('monquitto_pub -h 192.268.0.105 -t test/test -m "ngrok-url"')
+      const stdout = result.stdout
+      responseText = stdout
+      break
+    }
     default: {
       responseText = 'Message received'
       break
