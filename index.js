@@ -48,8 +48,7 @@ slimbot.on('message', async message => {
     }
     case 'ngrok-url': {
       const result = shell.exec('mosquitto_pub -h 192.168.0.105 -t test/test -m "ngrok-url"')
-      const stdout = result.stdout
-      responseText = stdout
+      responseText = result.stdout + ' Next msg you will receive ngrok-url'
       break
     }
     default: {
