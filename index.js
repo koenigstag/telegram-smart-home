@@ -51,6 +51,16 @@ slimbot.on('message', async message => {
       responseText = result.stdout + ' Next msg you will receive ngrok-url'
       break
     }
+    case 'xiaomi-on': {
+      const result = shell.exec('mosquitto_pub -h 192.168.0.105 -t test/test -m "xiaomi-on"')
+      responseText = result.stdout + ' Next msg you will receive ngrok-url'
+      break
+    }
+    case 'xiaomi-off': {
+      const result = shell.exec('mosquitto_pub -h 192.168.0.105 -t test/test -m "xiaomi-off"')
+      responseText = result.stdout + ' Next msg you will receive ngrok-url'
+      break
+    }
     default: {
       responseText = 'Message received'
       break
